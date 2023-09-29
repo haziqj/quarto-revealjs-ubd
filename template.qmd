@@ -679,7 +679,7 @@ Learn more: [Quarto Presentations](https://quarto.org/docs/presentations/revealj
 ## Summary
 
 
-The Quarto reveal.js [UBD theme](haziqj/quarto-revealjs-ubd) aims to
+The Quarto reveal.js [UBD theme](https://github.com/haziqj/quarto-revealjs-ubd) aims to
 be a minimal and elegant presention theme.
 
 Install the theme:
