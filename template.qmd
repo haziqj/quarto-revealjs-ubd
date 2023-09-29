@@ -5,6 +5,8 @@ format:
   ubd-revealjs:
     self-contained: false
     chalkboard: true
+    toc: true
+    toc-depth: 1
 author:
   - name: Haziq Jamil
     orcid: 0000-0003-3298-1010
@@ -50,7 +52,7 @@ https://coolors.co/palette/325494-58ddb3-f5c946-b10f2e-230c0f
 
 *Universiti Brunei Darussalam* (UBD; translation University of Brunei Darussalam; Jawi: يونيبرسيتي بروني دارالسلام) is the first university in Brunei.
 
-- UBD in figures 
+- UBD in figures
     - **Established**: 1985
     - **Academic faculties**: 9
     - **Research Institutes**: 7
@@ -60,14 +62,14 @@ https://coolors.co/palette/325494-58ddb3-f5c946-b10f2e-230c0f
   - **1985**: UBD established, first campus in Gadong
   - **1995**: UBD moved to Tungku Link
   - **2009**: Introduction of [GenNEXT Programme](https://ubd.edu.bn/admission/undergraduate/gennext-degree-programme/)
-  - **2011**: Commencement of the first Discovery Year programme		
+  - **2011**: Commencement of the first Discovery Year programme
 - Credits: [https://ubd.edu.bn/](https://ubd.edu.bn/) and Wikipedia
 
 ## Ordered lists
 
 *Universiti Brunei Darussalam* (UBD; translation University of Brunei Darussalam; Jawi: يونيبرسيتي بروني دارالسلام) is the first university in Brunei.
 
-1. UBD in figures 
+1. UBD in figures
     i) **Established**: 1985
     ii) **Academic faculties**: 9
     iii) **Research Institutes**: 7
@@ -76,7 +78,7 @@ https://coolors.co/palette/325494-58ddb3-f5c946-b10f2e-230c0f
     i) **1985**: UBD established, first campus in Gadong
     ii) **1995**: UBD moved to Tungku Link
     iii) **2009**: Introduction of [GenNEXT Programme](https://ubd.edu.bn/admission/undergraduate/gennext-degree-programme/)
-    iv) **2011**: Commencement of the first Discovery Year programme		
+    iv) **2011**: Commencement of the first Discovery Year programme
 3. Credits: [https://ubd.edu.bn/](https://ubd.edu.bn/) and Wikipedia
 
 ## Callout blocks
@@ -120,7 +122,7 @@ There are several options that you can customise (set at the project yaml):
 
 <br>
 
-> Archimedes will be remembered when Aeschylus is forgotten, because languages die and mathematical ideas do not. "Immortality" may be a silly word, but probably a mathematician has the best chance of whatever it may mean. 
+> Archimedes will be remembered when Aeschylus is forgotten, because languages die and mathematical ideas do not. "Immortality" may be a silly word, but probably a mathematician has the best chance of whatever it may mean.
 >
 > --- G. H. Hardy in *A Mathematician's Apology, 1941*
 
@@ -133,7 +135,7 @@ There are several options that you can customise (set at the project yaml):
 
 Here is a long sentence that will wrap onto the next line as it hits the column width, and continue this way until it stops.
 
-A second paragraph. 
+A second paragraph.
 And here's some code:
 
 ```r
@@ -173,7 +175,7 @@ To cross-reference, you have several options, for example:
 
 ## Citations
 
-Citations follow the standard [Quarto format](https://quarto.org/docs/authoring/footnotes-and-citations.html#citations) and be sourced from BibLaTex, BibTeX, or CLS files. 
+Citations follow the standard [Quarto format](https://quarto.org/docs/authoring/footnotes-and-citations.html#citations) and be sourced from BibLaTex, BibTeX, or CLS files.
 For example:
 
 - Topic 1: Spatial Frictions [@Fajgelbaum_Morales_Serrato_Zidar_2018; @Hsieh_Moretti_2019; @Moretti_2011]
@@ -197,6 +199,7 @@ where $A_i=\{\omega\in\Omega \mid X(\omega)=x_i \}$.
 
 This is what the font looks like for all the letters and numbers.
 
+$$
 \begin{gather*}
 AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVv\\WwXxYyZz \\[0.5em]
 1234567890 \\[0.5em]
@@ -204,7 +207,7 @@ AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVv\\WwXxYyZz \\[0.5em]
  \beta
 \Gamma  \gamma
 \Delta  \delta
-\epsilon  \varepsilon	
+\epsilon  \varepsilon
 \zeta
 \eta
 \Theta \theta  \vartheta
@@ -215,17 +218,17 @@ AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVv\\WwXxYyZz \\[0.5em]
 \nu
 \Xi  \xi
 \Pi \pi  \varpi
-\rho  
-\Sigma \sigma 
+\rho
+\Sigma \sigma
 \tau
 \Upsilon  \upsilon
 \Phi \phi  \varphi
 \chi
 \Psi  \psi
 \Omega  \omega \\[0.5em]
-\prod \oint \bigoplus \bigotimes \bigcup \bigcap 
+\prod \oint \bigoplus \bigotimes \bigcup \bigcap
 \end{gather*}
-
+$$
 
 ## Theorems et al.
 
@@ -242,7 +245,7 @@ There are infinite prime numbers.
 ::: {.proof}
 To prove @thm-inf-primes, we need to use @def-prime.
 Suppose that there exist only a finite number of primes, $p_1,\dots,p_n$, say.
-The number 
+The number
 $$
 N = 1+p_1\cdots p_n
 $$
@@ -275,7 +278,6 @@ But it isn't able to be cross-referenced, and if a different qmd document is ren
 
 # Code {.transition-slide-ubdyellow}
 
-
 ## Pretty code {auto-animate="true"}
 
 -   Over 20 syntax highlighting themes available
@@ -284,7 +286,7 @@ But it isn't able to be cross-referenced, and if a different qmd document is ren
 ``` r
 # Define a server for the Shiny app
 function(input, output) {
-  
+
   # Fill in the spot we created for a plot
   output$phonePlot <- renderPlot({
     # Render a barplot
@@ -304,11 +306,11 @@ Learn more: [Syntax Highlighting](https://quarto.org/docs/output-formats/html-co
 ``` r
 # Define a server for the Shiny app
 function(input, output) {
-  
+
   # Fill in the spot we created for a plot
   output$phonePlot <- renderPlot({
     # Render a barplot
-    barplot(WorldPhones[,input$region]*1000, 
+    barplot(WorldPhones[,input$region]*1000,
             main=input$region,
             ylab="Number of Telephones",
             xlab="Year")
@@ -374,9 +376,9 @@ library(GGally)
 library(palmerpenguins)
 
 ggpairs(
-  penguins, 
+  penguins,
   columns = 3:5,
-  aes(col = species), 
+  aes(col = species),
   progress = FALSE
 ) +
   theme_bw()

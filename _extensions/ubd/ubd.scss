@@ -2,8 +2,6 @@
 
 // Custom colours and variables
 $jet: #131516;
-$accent: #107895;
-$accent2: #9a2515;
 $right-arrow: "\2192"; // Unicode character for right arrow
 $whitecircle: "\25cb"; // Unicode character for right arrow
 $ubdblue: #325494;
@@ -35,13 +33,43 @@ $white: #fff;
 }
 
 
+.bg-ubdblue {
+  background-color: $ubdblue;
+  padding: 0.1em;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.bg-ubdred {
+  background-color: $ubdred;
+  padding: 0.1em;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.bg-ubdyellow {
+  background-color: $ubdyellow;
+  padding: 0.1em;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.bg-ubdteal {
+  background-color: $ubdteal;
+  padding: 0.1em;
+  border-radius: 5px;
+  display: inline-block;
+}
+
 // fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i);
-$font-family-sans-serif: "Roboto", sans-serif !default;
+
+$font-family-sans-serif: "Lato", sans-serif !default;
 $presentation-font-size-root: 36px;
 
-$presentation-heading-font: "Roboto", sans-serif !default;
-$presentation-heading-color: $jet !default;
+$presentation-heading-font: "Lato", sans-serif !default;
+$presentation-heading-color: $ubdblack !default;
 $presentation-heading-font-weight: 200;
 //$presentation-heading-line-height: 2;
 //$presentation-block-margin: 28px;
@@ -52,7 +80,6 @@ $body-color: $jet !default;
 $link-color: $ubdblue !default;
 $selection-bg: $ubdblue !default;
 
-
 /*-- scss:rules --*/
 
 .reveal a {
@@ -61,7 +88,7 @@ $selection-bg: $ubdblue !default;
 }
 
 .reveal p {
-  font-weight: 300;
+  font-weight: 350;
   margin-top: 1em;
   font-size: 0.9em;
   //margin-bottom: 0px;
@@ -110,6 +137,9 @@ $selection-bg: $ubdblue !default;
 
 }
 
+.reveal h1 {
+  font-weight: 300;
+}
 
 .reveal h2 {
   font-weight: 400;
@@ -206,7 +236,6 @@ $selection-bg: $ubdblue !default;
   pointer-events: auto;
 }
 
-
 // Same for chalkboard buttons (with an offset)
 
 .reveal .slide-chalkboard-buttons {
@@ -287,6 +316,8 @@ $selection-bg: $ubdblue !default;
   min-height: 2.5%;
 }
 
+// Slide numbers
+
 .slide-number, .reveal.has-logo .slide-number {
   top: unset !important;
   right: unset !important;
@@ -300,6 +331,8 @@ $selection-bg: $ubdblue !default;
   display: none;
 }
 
+// Format for inline code and chunks
+
 .reveal .slides code{
   font-size: 0.9em;
   color: $ubdblack;
@@ -308,11 +341,19 @@ $selection-bg: $ubdblue !default;
   border-radius: 5px;  
 }
 
+.reveal .slides code.sourceCode {
+  font-size: 1.2em;
+}
+
+// Progress bar
+
 .reveal .progress {
   background: $ubdblue;
   color: $ubdteal;
   height: 1.5%;
 }
+
+// Convenient transition slides
 
 .reveal .transition-slide {
   background-color: $ubdblue;
@@ -326,10 +367,8 @@ $selection-bg: $ubdblue !default;
   background-color: $ubdteal;
 }
 
+// Make math fonts smaller
+
 span.math.inline, span.math.display {
     font-size: 0.9em;  
-}
-
-.reveal .slides code.sourceCode {
-  font-size: 1.2em;
 }
