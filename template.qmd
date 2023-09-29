@@ -16,8 +16,8 @@ author:
     affiliations: Primary School
 date: last-modified
 bibliography: refs.bib
-execute: 
-  freeze: auto
+execute:
+  freeze: auto  # re-render only when source changes
 ---
 
 ## Introduction
@@ -694,10 +694,6 @@ Use these demo slides as a template:
 quarto use template grantmcdermott/quarto-revealjs-template
 ```
 
-
-
-
-
 ## References
 
 ::: {#refs}
@@ -707,10 +703,7 @@ quarto use template grantmcdermott/quarto-revealjs-template
 ## Appendix {#sec-appendix}
 
 ```{r}
-#| label: tbl-attsum
-#| tbl-cap: Summary of the base R `attitude` dataset
-
-# modelsummary::datasummary_skim(attitude)
+knitr::kable(head(mtcars)[,c("mpg",	"cyl", "disp", "hp", "wt")])
 ```
 
 [[Back to main]{.button}](#sec-crossref)
