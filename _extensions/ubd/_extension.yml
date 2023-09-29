@@ -18,6 +18,7 @@ contributes:
       slide-number: true
       date-format: long
       html-math-method: mathjax
+      preview-links: auto
       # chalkboard: 
       #   buttons: false
       include-after: |

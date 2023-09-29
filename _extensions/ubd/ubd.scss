@@ -50,14 +50,14 @@ $presentation-heading-font-weight: 200;
 //$body-bg: #f0f1eb !default;
 $body-color: $jet !default;
 $link-color: $ubdblue !default;
-$selection-bg: #26351c !default;
+$selection-bg: $ubdblue !default;
 
 
 /*-- scss:rules --*/
 
 .reveal a {
   line-height: 1.5em;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .reveal p {
@@ -283,7 +283,7 @@ $selection-bg: #26351c !default;
   left: unset !important;
   bottom: 10px !important;
   right: 10px;
-  max-height: 5%;
+  max-height: 2.5%;
   min-height: 2.5%;
 }
 
@@ -326,7 +326,10 @@ $selection-bg: #26351c !default;
   background-color: $ubdteal;
 }
 
-.MathJax_CHTML {
-    font-size: 50% !important;
+span.math.inline, span.math.display {
+    font-size: 0.9em;  
 }
 
+.reveal .slides code.sourceCode {
+  font-size: 1em;
+}
