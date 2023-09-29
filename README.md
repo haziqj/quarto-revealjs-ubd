@@ -3,6 +3,7 @@
 ![](ubd.png)
 
 The **UBD reveal.js Theme** is a modern and minimal theme designed for getting information across in a clean and uncluttered manner.
+For a demo, click this [link](http://haziqj.ml/quarto-revealjs-ubd/).
 
 This theme is based on the [Quarto Clean Theme ](https://github.com/grantmcdermott/quarto-revealjs-clean) by [Grant McDermott](https://grantmcdermott.com), with its logos and fonts changed, and colour scheme adapted to UBD's official brand colours.
 
