@@ -1,39 +1,29 @@
 # Quarto clean theme
 
-A minimal and elegant presentation theme for Quarto Reveal.js, inspired by Kyle's
-[LaTex template](https://raw.githack.com/kylebutts/templates/master/latex-slides/auxiliary/slides.pdf).
+![](ubd.png)
 
-Click the screenshot below to be taken to a
-[live demo](https://grantmcdermott.com/quarto-revealjs-clean-demo/template.html).
+The **UBD reveal.js Theme** is a modern and minimal theme designed for getting information across in a clean and uncluttered manner.
 
-[![](clean-title.png "live demo")](https://grantmcdermott.com/quarto-revealjs-clean-demo/template.html)
+This theme is based on the [Quarto Clean Theme ](https://github.com/grantmcdermott/quarto-revealjs-clean) by [Grant McDermott](https://grantmcdermott.com), with its logos and fonts changed, and colour scheme adapted to UBD's official brand colours.
 
 ## Use
 
+This document was created using [quarto](https://quarto.org/docs/presentations/revealjs/). 
 Depending on your use case, here are some [Quarto CLI](https://quarto.org/)
 commands to get started.
 
-If you would like to add the **clean** theme to an existing directory:
+If you would like to add the **UBD** theme to an existing directory, run this command in the terminal:
 
 ```bash
-quarto install extension grantmcdermott/quarto-revealjs-clean
+quarto install extension haziqj/quarto-revealjs-ubd
 ```
 
 Alternatively, you can use a
 [Quarto template](https://quarto.org/docs/extensions/starter-templates.html)
-that bundles the **clean** theme plus a .qmd starter document. This is a better
-option if you are starting a new project from scratch, since it will automatically
-create a new directory with all of the necessary scaffolding in one go. We provide
-two template options.
-
-- Bare bones template
+that bundles the **clean** theme plus a .qmd starter document. 
+The demo presentation has been provided as a template.
+Run the following command in the terminal:
 
 ```bash
-quarto use template grantmcdermott/quarto-revealjs-clean
-```
-
-- Full demo template
-
-```bash
-quarto use template grantmcdermott/quarto-revealjs-clean-demo
+quarto use template haziqj/quarto-revealjs-ubd
 ```

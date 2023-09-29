@@ -126,7 +126,6 @@ There are several options that you can customise (set at the project yaml):
 
 ## Multiple columns
 
-
 :::: {.columns}
 
 ::: {.column width="50%"}
@@ -136,7 +135,6 @@ Here is a long sentence that will wrap onto the next line as it hits the column 
 
 A second paragraph. 
 And here's some code:
-
 
 ```r
 my_fn <- function(x) {
@@ -158,9 +156,6 @@ A nice photo^[Credit: [`@domlafou`](https://unsplash.com/photos/YRMWVcdyhmI)]:
 :::
 
 ::::
-
-
-
 
 ## Alerts & cross-refs {#sec-crossref}
 
@@ -362,7 +357,6 @@ ggplot(mtcars, aes(hp, mpg, color = am)) +
 ::: footer
 Learn more: [Executable Code](https://quarto.org/docs/presentations/revealjs/#executable-code)
 :::
-
 
 ## Automatic multicolumn code and output
 
@@ -566,7 +560,6 @@ Learn more: [Tabsets](https://quarto.org/docs/presentations/revealjs/#tabsets)
 
 ## Interactive slides {.smaller transition="slide"}
 
-
 ```{r}
 #| out-width: 100%
 #| echo: false
@@ -678,7 +671,6 @@ Learn more: [Quarto Presentations](https://quarto.org/docs/presentations/revealj
 
 ## Summary
 
-
 The Quarto reveal.js [UBD theme](https://github.com/haziqj/quarto-revealjs-ubd) aims to
 be a minimal and elegant presention theme.
 
@@ -698,7 +690,6 @@ quarto use template haziqj/quarto-revealjs-ubd
 
 ::: {#refs}
 :::
-
 
 ## Appendix {#sec-appendix}
 
