@@ -1,81 +1,1048 @@
 ---
-title: A title
-subtitle: A subtitle
-format: clean-revealjs
+title: The (unofficial) reveal.js UBD theme
+subtitle: An example presentation using quarto
+format:
+  ubd-revealjs:
+    self-contained: true
 author:
-  - name: Your Name
-    orcid: 0000-0000-0000-0000
-    email: alias@email.com
-    affiliations: Your Institution
+  - name: Haziq Jamil
+    orcid: 0000-0003-3298-1010
+    email: haziq.jamil@ubd.edu.bn
+    affiliations: Universiti Brunei Darussalam
+  - name: Naqiyyah Afrah
+    orcid: 
+    email: naqiyyah@haziqj.ml
+    affiliations: Primary School
 date: last-modified
+bibliography: refs.bib
 ---
 
-## Example slide
+## Introduction
 
-### This is a subtitle
+### All about the theme
 
-Here we have some text that may run over several lines of the slide frame,
-depending on how long it is.
+The [**UBD reveal.js**]{.ubdred}^[reveal.js is an open source HTML presentation framework. It's a tool that enables anyone with a web browser to create fully-featured and beautiful presentations for free.] [**Theme**]{.ubdred} is a modern and minimal theme designed for getting information across in a clean and uncluttered manner.
 
-- first item 
-    - A sub item
+This theme is based on the [Quarto Clean Theme ](https://github.com/grantmcdermott/quarto-revealjs-clean) by [Grant McDermott](https://grantmcdermott.com), with its logos and fonts changed, and colour scheme adapted to UBD's official brand colours.
 
-Next, we'll brief review some theme-specific components.
+This document was created using [quarto](https://quarto.org/docs/presentations/revealjs/). 
+Check out the source code here.
 
-- Note that _all_ of the standard Reveal.js
-[features](https://quarto.org/docs/presentations/revealjs/)
-can be used with this theme, even if we don't highlight them here.
+## Colour palette
 
-## Additional theme classes
+- [Blues]{.ubdblue}: `ubdblue` a.k.a. Y In Mn Blue ([#325494]{.bg style="--col: #325494"})
+- [Greens]{.ubdteal}: `ubdteal` a.k.a. Medium Aquamarine ([#58DDB3]{.bg style="--col: #58DDB3"})
+- [Yellows]{.ubdyellow}: `ubdyellow` a.k.a. Maize Crayola Red ([#F5C946]{.bg style="--col: #F5C946"})
+- [Alerted text]{.ubdred}: `ubdred` a.k.a. Upsdell Red ([#B10F2E]{.bg style="--col: #B10F2E"})
+- Normal text: `ubdblack` a.k.a. Dark Sienna ([[#230C0F]{.bg style="--col: #230C0F"}]{.fg style="--col: #FFFFFF"})
+- [Grays]{.ubdgray}: `ubdgray` a.k.a. Spanish Gray ([#999999]{.bg style="--col: #999999"})
 
-### Some extra things you can do with the clean theme
+::: aside
+https://coolors.co/palette/325494-58ddb3-f5c946-b10f2e-230c0f
+:::
 
-Special classes for emphasis
+# Features {.transition-slide-ubdyellow}
 
-- `.alert` class for default emphasis, e.g. [important note]{.alert}.
-- `.fg` class for custom colour, e.g. [important note]{.fg style="--col: #e64173"}.
-- `.bg` class for custom background, e.g. [important note]{.bg style="--col: #e64173"}.
+## Unordered lists
 
-Cross-references
+*Universiti Brunei Darussalam* (UBD; translation University of Brunei Darussalam; Jawi: يونيبرسيتي بروني دارالسلام) is the first university in Brunei.
 
-- `.button` class provides a Beamer-like button, e.g.
-[[Summary]{.button}](#sec-summary)
+- UBD in figures 
+    - **Established**: 1985
+    - **Academic faculties**: 9
+    - **Research Institutes**: 7
+    - **Student enrolment**: 3,137 (in 2015, approx.)
 
-## Want more?
+- History
+  - **1985**: UBD established, first campus in Gadong
+  - **1995**: UBD moved to Tungku Link
+  - **2009**: Introduction of [GenNEXT Programme](https://ubd.edu.bn/admission/undergraduate/gennext-degree-programme/)
+  - **2011**: Commencement of the first Discovery Year programme		
+- Credits: [https://ubd.edu.bn/](https://ubd.edu.bn/) and Wikipedia
 
-### See our longer demo slides
+## Ordered lists
 
-We've deliberarely kept this template lean, to get you up and running as fast as
-possible.
+*Universiti Brunei Darussalam* (UBD; translation University of Brunei Darussalam; Jawi: يونيبرسيتي بروني دارالسلام) is the first university in Brunei.
 
-We provide a separate
-[demo template](https://github.com/grantmcdermott/quarto-revealjs-clean-demo),
-with more examples for integrating code, tables, figures, etc.
+1. UBD in figures 
+    i) **Established**: 1985
+    ii) **Academic faculties**: 9
+    iii) **Research Institutes**: 7
+    iv) **Student enrolment**: 3,137 (in 2015, approx.)
+2. History
+    i) **1985**: UBD established, first campus in Gadong
+    ii) **1995**: UBD moved to Tungku Link
+    iii) **2009**: Introduction of [GenNEXT Programme](https://ubd.edu.bn/admission/undergraduate/gennext-degree-programme/)
+    iv) **2011**: Commencement of the first Discovery Year programme		
+3. Credits: [https://ubd.edu.bn/](https://ubd.edu.bn/) and Wikipedia
 
-  - See the live demo slides
-  [here](https://grantmcdermott.com/quarto-revealjs-clean-demo/template.html).
+## Callout blocks
 
-## Summary {#sec-summary}
+Quarto provides a [built-in way](https://quarto.org/docs/authoring/callouts.html) to create blocks.
+
+::: callout-note
+Note that there are five types of callouts, including: `note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+::: callout-warning
+Callouts provide a simple way to attract attention, for example, to this warning.
+:::
+
+::: callout-important
+## This is Important
+
+Danger, callouts will really improve your writing.
+:::
+
+## Callout blocks (cont.)
+
+::: callout-tip
+## Tip With Title
+
+This is an example of a callout with a title.
+:::
+
+::: {.callout-caution collapse="true"}
+## Expand To Learn About Collapse
+
+This is an example of a 'collapsed' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
+:::
+
+There are several options that you can customise (set at the project yaml):
+
+- `callout-appearance:` either `default`, `simple`, or `minimal`.
+- `callout-icon:` either `true` or `false`.
+
+## Quotation (via blockquote)
+
+<br>
+
+> Archimedes will be remembered when Aeschylus is forgotten, because languages die and mathematical ideas do not. "Immortality" may be a silly word, but probably a mathematician has the best chance of whatever it may mean. 
+>
+> --- G. H. Hardy in *A Mathematician's Apology, 1941*
+
+## Multiple columns
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+#### Column 1
+
+Here is a long sentence that will wrap onto the next line as it hits the column width, and continue this way until it stops.
+
+A second paragraph. 
+And here's some code:
+
+
+```r
+my_fn <- function(x) {
+  print("Hello, World!")
+}
+```
+
+:::
+
+::: {.column width="50%"}
+#### Column 2
+
+Some other text in another column.
+
+A nice photo^[Credit: [`@domlafou`](https://unsplash.com/photos/YRMWVcdyhmI)]:
+
+![](https://source.unsplash.com/YRMWVcdyhmI)
+
+:::
+
+::::
+
+
+## Alerts & cross-refs {#sec-crossref}
+
+To emphasize specific words or text, you can:
+
+- Use the default `.alert` class, e.g. [important note]{.alert}.
+- Use the `.fg` class for custom colour, e.g. [important note]{.fg style="--col: #58DDB3"}.
+- Use the `.bg` class for custom background, e.g. [important note]{.bg style="--col: #F5C946"}.
+- I've also added some convenient CSS classes, e.g. `.ubdblue`, `.ubdteal`, `.ubdyellow`, `.ubdred`.
+
+To cross-reference, you have several options, for example:
+
+- Beamer-like `.button` class provided by this theme, e.g. [[Appendix]{.button}](#sec-appendix)
+- Quarto's native cross-ref syntax, e.g., "See @sec-appendix."
+
+## Citations
+
+Citations follow the standard [Quarto format](https://quarto.org/docs/authoring/footnotes-and-citations.html#citations) and be sourced from BibLaTex, BibTeX, or CLS files. 
+For example:
+
+- Topic 1: Spatial Frictions [@Fajgelbaum_Morales_Serrato_Zidar_2018; @Hsieh_Moretti_2019; @Moretti_2011]
+
+- Topic 2: Blah [@Suárez_Serrato_Zidar_2016]
+
+Hover over the citations to get the full reference.
+
+# Mathematics {.transition-slide-ubdyellow}
+
+## Using maths
+
+Let $X$ be a simple random variable defined on $(\Omega,\mathcal F,\mathbb P)$ that takes on finitely many values $\{x_1,\dots,x_n\}$.
+The expectation of $X$, $\operatorname{E}(X)$, is the Lebesgue integral of $X$ with respect to $\mathbb P$,
+$$
+\operatorname{E}(X) := \int X(\omega) \operatorname{d \mathbb P} = \sum_{i=1}^n x_i \operatorname{\mathbb P}(\omega \in A_i),
+$$
+where $A_i=\{\omega\in\Omega \mid X(\omega)=x_i \}$.
+
+
+\begin{gather*}
+AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVv\\WwXxYyZz \\[0.5em]
+1234567890 \\[0.5em]
+\alpha
+ \beta
+\Gamma  \gamma
+\Delta  \delta
+\epsilon  \varepsilon	
+\zeta
+\eta
+\Theta \theta  \vartheta
+\iota
+\kappa  \varkappa
+\Lambda  \lambda
+\mu
+\nu
+\Xi  \xi
+\Pi \pi  \varpi
+\rho  
+\Sigma \sigma 
+\tau
+\Upsilon  \upsilon
+\Phi \phi  \varphi
+\chi
+\Psi  \psi
+\Omega  \omega \\[0.5em]
+\prod \oint \bigoplus \bigotimes \bigcup \bigcap 
+\end{gather*}
+
+
+## Theorems et al.
+
+::: {#def-prime}
+#### Prime numbers
+A prime number is a natural number greater than 1 that is not a product of two smaller natural numbers.
+:::
+
+::: {#thm-inf-primes}
+#### Infinitude of primes
+There are infinite prime numbers.
+:::
+
+::: {.proof}
+To prove @thm-inf-primes, we need to use @def-prime.
+Suppose that there exist only a finite number of primes, $p_1,\dots,p_n$, say.
+The number 
+$$
+N = 1+p_1\cdots p_n
+$$
+is divisible by some prime $p$.
+But $p$ cannot be any of $p_1,\dots,p_n$, since the latter all leave remainder 1 on dividing $N$.
+This contradicts our assumption that $p_1,\dots,p_n$ is the complete list of primes.
+:::
+
+::: aside
+See also https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs
+:::
+
+## Theorems via callout blocks?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Components
+
+### Blocks
+
+Quarto provides
+[dedicated environments](https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs)
+for theorems, lemmas, and so forth.
+
+::: {#thm-line}
+## Regression Specification
+
+The main specification is as follows:
+
+
+$$
+y_{it} = X_{it} \beta + \mu_i + \varepsilon_{it}
+$$
+:::
+
+## Blocks
+
+
+But in presentation format, it's arguably more effective just to use a
+[Callout Block](https://quarto.org/docs/authoring/callouts.html).
+
+:::{.callout-note}
+## Regression Specification
+
+The main specification is as follows:
+
+$$
+y_{it} = X_{it} \beta + \mu_i + \varepsilon_{it}
+$$
+:::
+
+## Components
+
+### Multicolumn I: Text only
+
+:::: {.columns}
+
+::: {.column width="50%"}
+#### Column 1
+
+Here is a long sentence that will wrap onto the next line as it hits the column
+width, and continue this way until it stops.
+:::
+
+::: {.column width="50%"}
+#### Column 2
+
+Some other text in another column.
+
+A second paragraph.
+:::
+
+::::
+
+Multicolumn support is very flexible and we can continue with a single full
+span column in the same slide.
+
+## Components
+
+### Multicolumn II: Text and figures
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](images/kanagawa.jpg)
+:::
+
+::: {.column width="50%"}
+
+- A point about the figure that is potentially important.
+- Another point about the figure that is also potentially important.
+:::
+
+::::
+
+Note that sub- and multi-panel figures are also natively supported by Quarto.
+See [here](https://quarto.org/docs/authoring/figures.html#subfigures).
+
+## Components
+
+### Multicolumn III: Code and output
+
+```{r}
+#| echo: true
+#| label: fig-pairs
+#| fig-cap: "Pairwise scatterplot"
+#| fig-asp: 1
+#| output-location: column
+
+palette("Classic Tableau")
+
+par(
+  family = "HersheySans",
+  las = 1, pch = 19, cex = 1.5
+)
+
+pairs(
+  iris[,1:4],
+  col=iris$Species
+)
+```
+
+# Tables {background-color="#40666e"}
+
+## Tables
+
+### Regression example
+
+Quarto offers excellent
+[table support](https://quarto.org/docs/authoring/tables.html),
+with further customization via user libraries. Let's illustrate with a
+regression example:
+
+```{r}
+#| echo: true
+
+library(fixest)
+
+mods = feols(
+  rating ~ complaints + privileges + learning + csw0(raises + critical) + advance,
+  data = attitude
+)
+
+dict = c("rating"     = "Overall Rating",
+         "complaints" = "Handling of Complaints",
+         "privileges" = "No Special Priviledges",
+         "learning"   = "Opportunity to Learn",
+         "raises"     = "Performance-Based Raises",
+         "critical"   = "Too Critical",
+         "advance"    = "Advancement")
+```
+
+## Regression table
+
+### modelsummary
+
+If you use `modelsummary` with this Quarto theme, we advise setting the `gt`
+backend for a cleaner aesthetic. More details
+[here](https://vincentarelbundock.github.io/modelsummary/articles/appearance.html).
+
+```{r}
+#| echo: true
+#| output-location: slide
+
+library(modelsummary)
+options(modelsummary_factory_default = "gt")
+
+modelsummary(
+  setNames(mods, c("(1)", "(2)")),
+  coef_map = dict, stars = TRUE,
+  gof_omit = "Adj|IC|F|Log|RMSE"
+  ) |>
+  gt::tab_spanner(
+    label = "Dependent variable: Overall Rating",
+    columns = 2:3
+  )
+```
+
+## Regression table
+
+### etable
+
+`fixest`'s powerful native tabling functions were designed for LaTeX output. But we
+can use the `markdown = TRUE` option to make them work with this theme too.
+(Details
+[here](https://lrberge.github.io/fixest/articles/etable_new_features.html).) Quick notes:
+
+ - Install the `tinytex` & `pdftools` packages first.
+ - Set the R chunk option `output: asis`.
+
+````
+```{{r}}
+#| output: asis
+
+setFixest_etable(markdown = TRUE, drop = "Constant")
+setFixest_dict(dict)
+
+etable(mods, highlight = .("se" = "complaints"))
+```
+````
+
+## Regression table
+
+### etable (cont.)
+
+```{r}
+#| output: asis
+
+# setFixest_etable(markdown = TRUE, drop = "Constant")
+# setFixest_dict(dict)
+
+# etable(mods, highlight = .("se" = "complaints"), arraystretch = 1.5)
+```
+
+# Figures {background-color="#40666e"}
+
+## Figure
+
+![](images/kanagawa.jpg)
+
+## Figure
+
+### Full-size Figures
+
+You can use the `{.background-image}` container environment to completely fill
+the slide background with an image.
+
+Ideally, your figure will be the same aspect ratio as the screen that you're presenting on.
+
+- This can be a bit tricky because of the dynamic nature of reveal.js / HTML. But it's probably something close to 16:9.
+- Aspect ratio can also matter for a regular full-frame images (previous slide).
+
+## {background-image="images/kanagawa169.jpg" background-size="100%"}
+
+## Interactive plots
+
+```{r}
+#| out-width: 75%
+
+# library(threejs)
+#
+# # Approximate locations as factors
+# data(flights)
+# dest = factor(sprintf("%.2f:%.2f", flights[,3], flights[,4]))
+#
+# # A table of destination frequencies
+# freq = sort(table(dest), decreasing=TRUE)
+#
+# # The most frequent destinations in these data
+# frequent_destinations = names(freq)[1:10]
+#
+# # Subset the flight data by destination frequency
+# idx = dest %in% frequent_destinations
+# frequent_flights = flights[idx, ]
+#
+# # Lat/long and counts of frequent flights
+# ll = unique(frequent_flights[, 3:4])
+#
+# # Plot frequent destinations as bars, and the flights to and from
+# # them as arcs. Adjust arc width and color by frequency.
+# globejs(lat=ll[, 1], long=ll[, 2], arcs=frequent_flights,
+#         # bodycolor="#aaaaff", arcsHeight=0.3, arcsLwd=2,
+#         bodycolor="#fff", arcsHeight=0.3, arcsLwd=2,
+#         arcsColor="#ffff00", arcsOpacity=0.15,
+#         atmosphere=TRUE, color="#fff", pointsize=0.5)
+```
+
+_Note: Simple flight data example using `threejs`. There are many interactive
+plotting options beyond this.
+(More [details](https://quarto.org/docs/interactive/).)_
+
+# Summary {background-color="#40666e"}
+
+## Summary
 
 ### A minimal and elegant presentation theme
 
-The Quarto reveal.js clean theme aims to be a minimal and elegant presention
-theme.
 
-Install the theme.
+The Quarto reveal.js [clean theme](grantmcdermott/quarto-revealjs-clean) aims to
+be a minimal and elegant presention theme.
+
+We have highlighted some theme-specific components. But all of the regular reveal.js functionality is supported ([chalkboard](https://quarto.org/docs/presentations/revealjs/presenting.html#chalkboard), etc.)
+
+Install the theme:
 
 ```{.bash}
 quarto install extension grantmcdermott/quarto-revealjs-clean
 ```
 
-Use this lean template.
-
-```{.bash}
-quarto use template grantmcdermott/quarto-revealjs-clean
-```
-
-Use the longer demo template.
+Use these demo slides as a template:
 
 ```{.bash}
 quarto use template grantmcdermott/quarto-revealjs-clean-demo
 ```
+
+
+
+## Hello, There
+
+This presentation will show you examples of what you can do with Quarto and [Reveal.js](https://revealjs.com), including:
+
+-   Presenting code and LaTeX equations
+-   Including computations in slide output
+-   Image, video, and iframe backgrounds
+-   Fancy transitions and animations
+-   Printing to PDF
+
+...and much more
+
+## Pretty Code {auto-animate="true"}
+
+-   Over 20 syntax highlighting themes available
+-   Default theme optimized for accessibility
+
+``` r
+# Define a server for the Shiny app
+function(input, output) {
+  
+  # Fill in the spot we created for a plot
+  output$phonePlot <- renderPlot({
+    # Render a barplot
+  })
+}
+```
+
+::: footer
+Learn more: [Syntax Highlighting](https://quarto.org/docs/output-formats/html-code.html#highlighting)
+:::
+
+## Code Animations {auto-animate="true"}
+
+-   Over 20 syntax highlighting themes available
+-   Default theme optimized for accessibility
+
+``` r
+# Define a server for the Shiny app
+function(input, output) {
+  
+  # Fill in the spot we created for a plot
+  output$phonePlot <- renderPlot({
+    # Render a barplot
+    barplot(WorldPhones[,input$region]*1000, 
+            main=input$region,
+            ylab="Number of Telephones",
+            xlab="Year")
+  })
+}
+```
+
+::: footer
+Learn more: [Code Animations](https://quarto.org/docs/presentations/revealjs/advanced.html#code-animations)
+:::
+
+## Line Highlighting
+
+-   Highlight specific lines for emphasis
+-   Incrementally highlight additional lines
+
+``` {.python code-line-numbers="4-5|7|10"}
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+::: footer
+Learn more: [Line Highlighting](https://quarto.org/docs/presentations/revealjs/#line-highlighting)
+:::
+
+## Executable Code
+
+```{r}
+#| echo: true
+#| fig-width: 10
+#| fig-height: 4.5
+library(ggplot2)
+ggplot(mtcars, aes(hp, mpg, color = am)) +
+  geom_point() +
+  geom_smooth(formula = y ~ x, method = "loess")
+```
+
+::: footer
+Learn more: [Executable Code](https://quarto.org/docs/presentations/revealjs/#executable-code)
+:::
+
+## LaTeX Equations
+
+[MathJax](https://www.mathjax.org/) rendering of equations to HTML
+
+::: columns
+::: {.column width="40%"}
+``` tex
+\begin{gather*}
+a_1=b_1+c_1\\
+a_2=b_2+c_2-d_2+e_2
+\end{gather*}
+
+\begin{align}
+a_{11}& =b_{11}&
+  a_{12}& =b_{12}\\
+a_{21}& =b_{21}&
+  a_{22}& =b_{22}+c_{22}
+\end{align}
+```
+:::
+
+::: {.column width="60%"}
+```{=tex}
+\begin{gather*}
+a_1=b_1+c_1\\
+a_2=b_2+c_2-d_2+e_2
+\end{gather*}
+```
+```{=tex}
+\begin{align}
+a_{11}& =b_{11}&
+  a_{12}& =b_{12}\\
+a_{21}& =b_{21}&
+  a_{22}& =b_{22}+c_{22}
+\end{align}
+```
+:::
+:::
+
+::: footer
+Learn more: [LaTeX Equations](https://quarto.org/docs/authoring/markdown-basics.html#equations)
+:::
+
+## Column Layout {.smaller}
+
+Arrange content into columns of varying widths:
+
+::: columns
+::: {.column width="35%"}
+#### Motor Trend Car Road Tests
+
+The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="62%"}
+```{r}
+knitr::kable(head(mtcars)[,c("mpg",	"cyl", "disp", "hp", "wt")])
+```
+:::
+:::
+
+::: footer
+Learn more: [Multiple Columns](https://quarto.org/docs/presentations/revealjs/#multiple-columns)
+:::
+
+## Incremental Lists
+
+Lists can optionally be displayed incrementally:
+
+::: incremental
+-   First item
+-   Second item
+-   Third item
+:::
+
+. . .
+
+<br/> Insert pauses to make other types of content display incrementally.
+
+::: footer
+Learn more: [Incremental Lists](https://quarto.org/docs/presentations/revealjs/#incremental-lists)
+:::
+
+## Fragments
+
+Incremental text display and animation with fragments:
+
+<br/>
+
+::: {.fragment .fade-in}
+Fade in
+:::
+
+::: {.fragment .fade-up}
+Slide up while fading in
+:::
+
+::: {.fragment .fade-left}
+Slide left while fading in
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Fade in then semi out
+:::
+
+. . .
+
+::: {.fragment .strike}
+Strike
+:::
+
+::: {.fragment .highlight-red}
+Highlight red
+:::
+
+::: footer
+Learn more: [Fragments](https://quarto.org/docs/presentations/revealjs/advanced.html#fragments)
+:::
+
+## Slide Backgrounds {background="#43464B"}
+
+Set the `background` attribute on a slide to change the background color (all CSS color formats are supported).
+
+Different background transitions are available via the `background-transition` option.
+
+::: footer
+Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#color-backgrounds)
+:::
+
+## Media Backgrounds {background="#43464B" background-image="images/milky-way.jpeg"}
+
+You can also use the following as a slide background:
+
+-   An image: `background-image`
+
+-   A video: `background-video`
+
+-   An iframe: `background-iframe`
+
+::: footer
+Learn more: [Media Backgrounds](https://quarto.org/docs/presentations/revealjs/#image-backgrounds)
+:::
+
+## Absolute Position
+
+Position images or other elements at precise locations
+
+![](mini/images/kitten-400-350.jpeg){.absolute top="170" left="30" width="400" height="400"}
+
+![](mini/images/kitten-450-250.jpeg){.absolute .fragment top="150" right="80" width="450"}
+
+![](mini/images/kitten-300-200.jpeg){.absolute .fragment bottom="110" right="130" width="300"}
+
+::: footer
+Learn more: [Absolute Position](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position)
+:::
+
+## Auto-Animate {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+Automatically animate matching elements across slides with Auto-Animate.
+
+::: r-hstack
+::: {data-id="box1" auto-animate-delay="0" style="background: #2780e3; width: 200px; height: 150px; margin: 10px;"}
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background: #3fb618; width: 200px; height: 150px; margin: 10px;"}
+:::
+
+::: {data-id="box3" auto-animate-delay="0.2" style="background: #e83e8c; width: 200px; height: 150px; margin: 10px;"}
+:::
+:::
+
+::: footer
+Learn more: [Auto-Animate](https://quarto.org/docs/presentations/revealjs/advanced.html#auto-animate)
+:::
+
+## Auto-Animate {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+Automatically animate matching elements across slides with Auto-Animate.
+
+::: r-stack
+::: {data-id="box1" style="background: #2780e3; width: 350px; height: 350px; border-radius: 200px;"}
+:::
+
+::: {data-id="box2" style="background: #3fb618; width: 250px; height: 250px; border-radius: 200px;"}
+:::
+
+::: {data-id="box3" style="background: #e83e8c; width: 150px; height: 150px; border-radius: 200px;"}
+:::
+:::
+
+::: footer
+Learn more: [Auto-Animate](https://quarto.org/docs/presentations/revealjs/advanced.html#auto-animate)
+:::
+
+## Slide Transitions {.smaller}
+
+The next few slides will transition using the `slide` transition
+
+| Transition | Description                                                            |
+|------------|------------------------------------------------------------------------|
+| `none`     | No transition (default, switch instantly)                              |
+| `fade`     | Cross fade                                                             |
+| `slide`    | Slide horizontally                                                     |
+| `convex`   | Slide at a convex angle                                                |
+| `concave`  | Slide at a concave angle                                               |
+| `zoom`     | Scale the incoming slide so it grows in from the center of the screen. |
+
+::: footer
+Learn more: [Slide Transitions](https://quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions)
+:::
+
+## Tabsets {.smaller .scrollable transition="slide"}
+
+::: panel-tabset
+### Plot
+
+```{r}
+library(ggplot2)
+ggplot(mtcars, aes(hp, mpg, color = am)) +
+  geom_point() +
+  geom_smooth(formula = y ~ x, method = "loess")
+```
+
+### Data
+
+```{r}
+knitr::kable(mtcars)
+```
+:::
+
+::: footer
+Learn more: [Tabsets](https://quarto.org/docs/presentations/revealjs/#tabsets)
+:::
+
+## Interactive Slides {.smaller transition="slide"}
+
+## Preview Links
+
+Navigate to hyperlinks without disrupting the flow of your presentation.
+
+Use the `preview-links` option to open links in an iframe on top of your slides. Try clicking the link below for a demonstration:
+
+::: {style="text-align: center; margin-top: 1em"}
+[Matplotlib: Visualization with Python](https://matplotlib.org/){preview-link="true" style="text-align: center"}
+:::
+
+::: footer
+Learn more: [Preview Links](https://quarto.org/docs/presentations/revealjs/presenting.html#preview-links)
+:::
+
+## Themes
+
+10 Built-in Themes (or [create your own](https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes))
+
+::: {layout-ncol="2"}
+![](images/moon.png)
+
+![](images/sky.png)
+:::
+
+::: footer
+Learn more: [Themes](https://quarto.org/docs/presentations/revealjs/themes.html)
+:::
+
+## Easy Navigation
+
+::: {style="margin-bottom: 0.9em;"}
+Quickly jump to other parts of your presentation
+:::
+
+::: {layout="[1, 20]"}
+![](images/presentation-menu.png){width="41"}
+
+Toggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.
+:::
+
+You can also press `m` to toggle the menu open and closed.
+
+::: footer
+Learn more: [Navigation](https://quarto.org/docs/presentations/revealjs/presenting.html#navigation-menu)
+:::
+
+## Chalkboard {chalkboard-buttons="true"}
+
+::: {style="margin-bottom: 0.9em;"}
+Free form drawing and slide annotations
+:::
+
+::: {layout="[1, 20]"}
+![](images/presentation-chalkboard.png){width="41"}
+
+Use the chalkboard button at the bottom left of the slide to toggle the chalkboard.
+:::
+
+::: {layout="[1, 20]"}
+![](images/presentation-notes-canvas.png){width="41"}
+
+Use the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.
+:::
+
+You can also press `b` to toggle the chalkboard or `c` to toggle the notes canvas.
+
+::: footer
+Learn more: [Chalkboard](https://quarto.org/docs/presentations/revealjs/presenting.html#chalkboard)
+:::
+
+## Point of View
+
+Press `o` to toggle overview mode:
+
+![](images/overview-mode.png){.border}
+
+Hold down the `Alt` key (or `Ctrl` in Linux) and click on any element to zoom towards it---try it now on this slide.
+
+::: footer
+Learn more: [Overview Mode](https://quarto.org/docs/presentations/revealjs/presenting.html#overview-mode), [Slide Zoom](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-zoom)
+:::
+
+## Speaker View
+
+Press `s` (or use the presentation menu) to open speaker view
+
+![](images/speaker-view.png){fig-align="center" style="border: 3px solid #dee2e6;" width="780"}
+
+::: footer
+Learn more: [Speaker View](https://quarto.org/docs/presentations/revealjs/presenting.html#speaker-view)
+:::
+
+## Authoring Tools {.smaller}
+
+Live side-by-side preview for any notebook or text editor including Jupyter and VS Code
+
+::: columns
+::: {.column width="50%"}
+![](images/jupyter-edit.png){.border .border-thick}
+:::
+
+::: {.column width="50%"}
+![](images/jupyter-preview.png){.border .border-thick}
+:::
+:::
+
+::: footer
+Learn more: [Jupyter](https://quarto.org/docs/tools/jupyter-lab.html), [VS Code](https://quarto.org/docs/tools/vscode.html), [Text Editors](https://quarto.org/docs/tools/text-editors.html)
+:::
+
+## Authoring Tools {.smaller}
+
+RStudio includes an integrated presentation preview pane
+
+![](images/rstudio.png){.border width="900"}
+
+::: footer
+Learn more: [RStudio](https://quarto.org/docs/tools/rstudio.html)
+:::
+
+## And More...
+
+-   [Touch](https://quarto.org/docs/presentations/revealjs/advanced.html#touch-navigation) optimized (presentations look great on mobile, swipe to navigate slides)
+-   [Footer & Logo](https://quarto.org/docs/presentations/revealjs/#footer-logo) (optionally specify custom footer per-slide)
+-   [Auto-Slide](https://quarto.org/docs/presentations/revealjs/presenting.html#auto-slide) (step through slides automatically, without any user input)
+-   [Multiplex](https://quarto.org/docs/presentations/revealjs/presenting.html#multiplex) (allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop).
+
+::: footer
+Learn more: [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/)
+:::
+
+
+
+
+
+
+## References
+
+::: {#refs}
+:::
+
+
+## Appendix {#sec-appendix}
+
+```{r}
+#| label: tbl-attsum
+#| tbl-cap: Summary of the base R `attitude` dataset
+
+# modelsummary::datasummary_skim(attitude)
+```
+
+[[Back to main]{.button}](#sec-crossref)

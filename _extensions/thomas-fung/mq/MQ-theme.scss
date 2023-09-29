@@ -1,0 +1,201 @@
+$red:         #A6192E !default;
+$purple:      #80225F !default;
+$deep-red:    #76232F !default;
+$magenta:     #C6007E !default;
+$charcoal:    #373A36 !default;
+$bright-red:  #D6001C !default;
+$sand:        #D6D2C4 !default;
+$white:       #fff !default;
+$green:       #00AA4F !default;
+
+$colors: (
+  "red":        $red,
+  "purple":     $purple,
+  "deep-red":   $deep-red,
+  "magenta":    $magenta,
+  "charcoal":   $charcoal,
+  "bright-red": $bright-red,
+  "sand":       $sand,
+  "white":      $white,
+  "green":      $green
+) !default;
+
+/*-- scss:uses --*/
+
+/*-- scss:functions --*/
+
+/*-- scss:defaults --*/
+// Headings
+$headingTextTransform: uppercase;
+
+$body-bg:                   $white !default;
+$body-color:                $charcoal !default;
+
+$link-color:                              $red !default;
+
+$font-family-sans-serif:      Arial !default;
+$presentation-font-size-root: 3em !default;
+
+$presentation-title-slide-text-align: left;
+
+// Code Blocks
+$code-block-font-size: 70% !default;
+$code-block-bg:  #F5F5F5 !default;
+
+/* -- scss:mixins --*/
+
+/*-- scss:rules --*/
+
+.section-header-text{
+  font-size: 200% !important;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.section-subheader-text{
+  font-size: 125% !important;
+  color: $red;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+// Macquarie Logo
+.slide-logo {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 10px;
+  min-height: 5%;
+  max-height: 10%;
+  height: 100%;
+  width: auto;
+  color: $white;
+}
+
+// Title
+
+#title-slide{
+  top: 0 !important;
+  // font-size: 85% !important;
+  
+  .quarto-title-authors {
+    display: flex;
+    justify-content: left;
+  
+  .quarto-title-author {
+      padding-left: 0em;
+      padding-right: 0em;
+      width: 100%;
+    }
+  }
+}
+
+.subtitle{
+  font-size: 125% !important;
+  color: $red;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.center{
+  background-color: $sand !important;
+}
+
+.reveal .slides h1{
+  text-transform: capitalize;
+}
+
+.reveal .slides h2{
+  text-transform: capitalize !important;
+  font-size: 4rem;
+  background-image: url("https://github.com/thomas-fung/quarto-mq-revealjs-theme/raw/main/_extensions/mq/underline.png");
+  background-position: 0 1.15em;
+  background-repeat: repeat-x;
+  background-size: 1107px 12px;
+}
+
+.reveal .slides h3{
+  text-transform: uppercase;
+  color: $red;
+  font-size: 110%;
+}
+
+.v-center-container {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.reveal .slides code{
+  color: $bright-red !important;
+}
+
+// Colours
+
+.red{
+  color: $red !important;
+}
+
+.purple{
+  color: $purple !important;
+}
+
+.deep-red{
+  color: $deep-red !important;
+}
+
+.magenta{
+  color: $magenta !important;
+}
+
+.charcoal{
+  color: $charcoal !important;
+}
+
+.bright-red{
+  color: $bright-red !important;
+}
+
+.sand{
+  color: $sand !important;
+}
+
+.white{
+  color: $white !important;
+}
+
+.green{
+  color: $green !important;
+}
+
+// Hover Text
+
+.hovertext {
+  position: relative;
+  border-bottom: 1px dotted $charcoal;
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0.5;
+  width: 480px;
+  background-color: $charcoal;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+

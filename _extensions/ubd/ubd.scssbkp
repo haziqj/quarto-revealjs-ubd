@@ -1,38 +1,73 @@
 /*-- scss:defaults --*/
 
 // Custom colours and variables
-$jet: #131516;
-$accent: #107895;
-$accent2: #9a2515;
+$ubdblack: #230C0F;
+$white: #fff;
+$ubdgray: #999;
+$accent: #325494;
+$accent2: #230C0F;
 $right-arrow: "\2192"; // Unicode character for right arrow
+$ubdblue: #325494;
+$ubdteal: #58DDB3;
+$ubdyellow: #F5C946;
+$ubdred: #b10f2e;
+
+$colors: (
+  "$ubdblue":   $ubdblue,
+  "$ubdteal":   $ubdteal,
+  "$ubdyellow": $ubdyellow
+) !default;
+
+.ubdblue {
+  color: $ubdblue;
+}
+
+.ubdteal {
+  color: $ubdteal;
+}
+
+.ubdyellow {
+  color: $ubdyellow;
+}
+
+.ubdred {
+  color: $ubdred;
+}
+
+.ubdgray {
+  color: $ubdgray;
+}
+
 
 // fonts
-@import url(https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i);
+// @import url(https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@375&display=swap');
 $font-family-sans-serif: "Roboto", sans-serif !default;
-$presentation-font-size-root: 36px;
+$presentation-font-size-root: 2.2em;
 
 $presentation-heading-font: "Roboto", sans-serif !default;
-$presentation-heading-color: $jet !default;
-$presentation-heading-font-weight: 200;
+$presentation-heading-color: $ubdblack !default;
+$presentation-heading-font-weight: 400;
 //$presentation-heading-line-height: 2;
 //$presentation-block-margin: 28px;
 
 // colors
 //$body-bg: #f0f1eb !default;
-$body-color: $jet !default;
+$body-color: $ubdblack !default;
 $link-color: $accent !default;
 $selection-bg: #26351c !default;
-
 
 /*-- scss:rules --*/
 
 .reveal a {
   line-height: 1.5em;
+  font-size: 0.9em;
 }
 
 .reveal p {
   font-weight: 300;
-  margin-top: 1.25em;
+  margin-top: 1em;
+  font-size: 0.9em;
 }
 
 // title and headings
@@ -43,7 +78,7 @@ $selection-bg: #26351c !default;
   .title {
     color: $body-color;
     font-size: 1.4em;
-    font-weight: 350;
+    font-weight: 400;
   }
 
   .subtitle {
@@ -78,33 +113,32 @@ $selection-bg: #26351c !default;
 
 }
 
-
 .reveal h2 {
-  font-weight: 350;
+  font-weight: 400;
   font-size: 1.4em;
 }
 
 .reveal h3 {
   color: $accent;
   font-style: italic;
-  font-weight: 350;
+  font-weight: 400;
   font-size: 0.95em;
 }
 
 .reveal h4 {
-  color: $accent2;
+  color: $ubdgray;
   font-weight: 350;
-  margin-top: 1.25em;
+  margin-top: 1em;
 }
 
 // alerts etc.
 
 .alert {
-  color: $accent2;
+  color: $ubdred;
 }
 
 .fg {
-  color: var(--col, $jet);
+  color: var(--col, $ubdblack);
 }
 
 .bg {
@@ -114,6 +148,8 @@ $selection-bg: #26351c !default;
   display: inline-block;
 }
 
+
+
 // lists
 
 // Unordered lists
@@ -121,6 +157,7 @@ $selection-bg: #26351c !default;
 .reveal ul {
   font-weight: 300;
   padding-left: 16px;
+  font-size: 0.9em;
 
   li::marker {
     color: mix($accent, white, 70%);
@@ -129,6 +166,7 @@ $selection-bg: #26351c !default;
 
 .reveal ul ul {
   list-style: none;
+  font-size: 0.8em;
 
   li:before {
     content: $right-arrow;
@@ -145,10 +183,16 @@ $selection-bg: #26351c !default;
 .reveal ol {
   font-weight: 300;
   padding-left: 16px;
+  font-size: 0.9em;
 
   li::marker {
     color: $accent;
   }
+}
+
+.reveal ol ol {
+  font-size: 0.8em;
+  
 }
 
 // Move "hamburger" menu button to top right
@@ -197,8 +241,8 @@ $selection-bg: #26351c !default;
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
-  background-color: $accent;
-  border: 1px solid $accent;
+  background-color: $ubdblue;
+  border: 1px solid $ubdblue;
   color: #fff !important;
   text-decoration: none;
   border-radius: 4px;
@@ -234,3 +278,68 @@ $selection-bg: #26351c !default;
   height: auto;
   object-fit: contain;
 }
+
+.reveal .progress {
+  background: $ubdblue;
+  color: $ubdteal;
+  height: 1.5%;
+}
+
+.reveal .transition-slide {
+  background-color: $ubdblue;
+}
+
+.reveal .transition-slide-ubdyellow {
+  background-color: $ubdyellow;
+}
+
+.reveal .transition-slide-ubdteal {
+  background-color: $ubdteal;
+}
+
+// UBD Logo
+.reveal .slide-logo {
+  display: block;
+  position: fixed;
+  z-index: 0;
+  top: unset !important;
+  left: unset !important;
+  bottom: 10px !important;
+  right: 10px;
+  max-height: 5%;
+  min-height: 2.5%;
+}
+
+.slide-number, .reveal.has-logo .slide-number {
+  top: unset !important;
+  right: unset !important;
+  bottom: 10px !important;
+  left: 10px !important;
+  color: #999 !important;
+}
+
+// Hide logo and slide number on the title slide
+.reveal .slide-number > a[href*='title-slide'] {
+  display: none;
+}
+
+aside > div {
+
+  p {
+    /* Styles for the paragraph inside the div 
+    color: $ubdblack;
+    /* ... any other styles you'd like to add for the paragraph */
+  }
+  
+  /* ... any other styles you'd like to add for the div */
+}
+
+.reveal .slides code{
+  font-size: 0.9em;
+  color: $ubdblack;
+  background-color: mix($ubdgray, white, 40%);
+  padding: 0.05em;
+  border-radius: 5px;  
+}
+
+
