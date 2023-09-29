@@ -27,3 +27,7 @@ Run the following command in the terminal:
 ```bash
 quarto use template haziqj/quarto-revealjs-ubd
 ```
+
+## Publishing quarto documents
+
+There are several ways of publishing quarto documents. I typically use GitHub actions to do it. See here: https://quarto.org/docs/publishing/github-pages.html#github-action
