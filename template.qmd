@@ -17,7 +17,7 @@ author:
 date: last-modified
 bibliography: refs.bib
 execute:
-  freeze: auto  # re-render only when source changes
+  freeze: auto
 ---
 
 ## Introduction
@@ -674,7 +674,7 @@ Learn more: [Speaker View](https://quarto.org/docs/presentations/revealjs/presen
 Learn more: [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/)
 :::
 
-# Summary {background-color="#40666e"}
+# Summary {.transition-slide-ubdyellow}
 
 ## Summary
 
@@ -691,7 +691,7 @@ quarto install extension haziqj/quarto-revealjs-ubd
 Use these demo slides as a template:
 
 ```{.bash}
-quarto use template grantmcdermott/quarto-revealjs-template
+quarto use template haziqj/quarto-revealjs-ubd
 ```
 
 ## References
