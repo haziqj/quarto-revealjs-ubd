@@ -12,12 +12,19 @@ $ubdblack: #230C0F;
 $ubdgray: #999;
 $white: #fff;
 
+$ubddeepred: #b71757;
+$ubdbrightred: #e81856;
+$ubdsoftred: #f05a91;
+$ubddarkgrey: #404041;
+
+// Colour text
+
 .ubdblue {
   color: $ubdblue;
 }
 
 .ubdteal {
-  color: $ubdteal;
+  color: #52ba99;
 }
 
 .ubdyellow {
@@ -32,29 +39,38 @@ $white: #fff;
   color: $ubdgray;
 }
 
+.ubddeepred {
+  color: $ubddeepred;
+}
 
-.bg-ubdblue {
+// Background text fill
+
+.ubdbluebg {
+  color: $white;
   background-color: $ubdblue;
-  padding: 0.1em;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
   border-radius: 5px;
   display: inline-block;
 }
 
-.bg-ubdred {
+.ubdredbg {
+  color: $white;
   background-color: $ubdred;
-  padding: 0.1em;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
   border-radius: 5px;
   display: inline-block;
 }
 
-.bg-ubdyellow {
+.ubdyellowbg {
   background-color: $ubdyellow;
   padding: 0.1em;
   border-radius: 5px;
   display: inline-block;
 }
 
-.bg-ubdteal {
+.ubdtealbg {
   background-color: $ubdteal;
   padding: 0.1em;
   border-radius: 5px;
@@ -65,10 +81,10 @@ $white: #fff;
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i);
 
-$font-family-sans-serif: "Lato", sans-serif !default;
+$font-family-sans-serif: "Roboto", sans-serif !default;
 $presentation-font-size-root: 36px;
 
-$presentation-heading-font: "Lato", sans-serif !default;
+$presentation-heading-font: "Roboto", sans-serif !default;
 $presentation-heading-color: $ubdblack !default;
 $presentation-heading-font-weight: 200;
 //$presentation-heading-line-height: 2;
@@ -77,51 +93,69 @@ $presentation-heading-font-weight: 200;
 // colors
 //$body-bg: #f0f1eb !default;
 $body-color: $jet !default;
-$link-color: $ubdblue !default;
+$link-color: $ubddeepred !default;
 $selection-bg: $ubdblue !default;
 
 /*-- scss:rules --*/
 
 .reveal a {
   line-height: 1.5em;
-  font-size: 1em;
+  font-size: 100%;
 }
 
 .reveal p {
   font-weight: 350;
   margin-top: 1em;
-  font-size: 0.9em;
-  //margin-bottom: 0px;
+  font-size: 100%;
+  padding-bottom: 5px;
 }
 
 // title and headings
 
 #title-slide {
   text-align: left;
+  color: $white;
+  display: block;
+  margin-top: 1.8em;
+  margin-left: 1em;
+  width: 90%;
 
   .title {
-    color: $body-color;
+    color: $white;
     font-size: 1.4em;
     font-weight: 400;
   }
 
   .subtitle {
-    color: $ubdblue;
+    color: $white;
     font-style: italic;
-    margin-top: 0em;
+    margin-top: 0;
+    margin-bottom: 0;
   }
-
-  .institute,
+ 
+  .institute {
+    color:$white
+  }
+  .quarto-title-institute {
+    font-style: bold;
+    color: $white;
+  }
   .quarto-title-affiliation,
   .quarto-title-author-email {
+    color: $white;
     font-style: italic;
     // font-size: 80%;
     // color: #7F7F7F;
   }
 
+  .date {
+    margin-top: 0.25em;
+  }
+
   .author,
   .quarto-title-author-name {
-    color: $body-color;
+    margin-top: 0.5em;
+    color: $white;
   }
 
   .quarto-title-authors {
@@ -143,26 +177,31 @@ $selection-bg: $ubdblue !default;
 
 .reveal h2 {
   font-weight: 400;
-  font-size: 1.4em;
+  font-size: 1.35em;
+  margin-top: -0.2em;
 }
 
 .reveal h3 {
-  color: $ubdblue;
+  color: $ubdbrightred;
   font-style: italic;
   font-weight: 350;
-  font-size: 0.95em;
+  font-size: 1em;
+  margin-bottom: -5px;
 }
 
 .reveal h4 {
-  color: $ubdgray;
+  color: $ubddarkgrey;
   font-weight: 350;
-  margin-top: 1em;
+  font-size: 0.9em;
+  padding-top: 0.5em;
+  margin-top: 0.25em;
+  // margin-bottom: -0.25em;
 }
 
 // alerts etc.
 
 .alert {
-  color: $ubdred;
+  color: $ubddeepred;
 }
 
 .fg {
@@ -183,7 +222,9 @@ $selection-bg: $ubdblue !default;
 .reveal ul {
   font-weight: 300;
   padding-left: 16px;
-  font-size: 0.9em;
+  font-size: 95%;
+  margin-top: 0;
+  padding-top: 0;
 
   li::marker {
     color: mix($ubdblue, white, 70%);
@@ -192,15 +233,17 @@ $selection-bg: $ubdblue !default;
 
 .reveal ul ul {
   list-style: none;
-  font-size: 0.8em;
-
+  font-size: 85%;
+  padding: 0;
+  margin-bottom: 0;
+  
   li:before {
     content: $whitecircle;
     color: mix($ubdblue, white, 60%);
     display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-    margin-right: 0.5em;
+    width: 0.3em;
+    margin-left: -1.2em;
+    margin-right: 0.8em;
   }
 }
 
@@ -209,7 +252,9 @@ $selection-bg: $ubdblue !default;
 .reveal ol {
   font-weight: 300;
   padding-left: 16px;
-  font-size: 0.9em;
+  font-size: 90%;
+  margin-top: 15px;
+  margin-bottom: 0;
 
   li::marker {
     color: $ubdblue;
@@ -217,7 +262,7 @@ $selection-bg: $ubdblue !default;
 }
 
 .reveal ol ol {
-  font-size: 0.8em;
+  font-size: 80%;
 }
 
 // Move "hamburger" menu button to top right
@@ -308,12 +353,12 @@ $selection-bg: $ubdblue !default;
   display: block;
   position: fixed;
   z-index: 0;
-  top: unset !important;
+  bottom: unset !important;
   left: unset !important;
-  bottom: 10px !important;
-  right: 10px;
-  max-height: 2.5%;
-  min-height: 2.5%;
+  top: 15px !important;
+  right: -6px !important;
+  max-height: 15% !important;
+  min-height: 15% !important;
 }
 
 // Slide numbers
@@ -345,11 +390,28 @@ $selection-bg: $ubdblue !default;
   font-size: 1.2em;
 }
 
+div.cell-output.cell-output-stdout > pre > code {
+  /* Your styles here, e.g., */
+  font-size: 1.2em;  /* Adjust this value to your preference */
+  background-color: mix($ubdgray, white, 0%);
+  padding: 0.25em;
+  border-radius: 0px;  
+  overflow-y: visible;
+  // max-height: none;
+}
+
+// Make column text smaller
+
+.column > p {
+  font-size: 0.95em; 
+  margin-bottom: -1em;
+}
+
 // Progress bar
 
 .reveal .progress {
-  background: $ubdblue;
-  color: $ubdteal;
+  background: $ubdsoftred;
+  color: $ubddeepred;
   height: 1.5%;
 }
 
@@ -367,8 +429,156 @@ $selection-bg: $ubdblue !default;
   background-color: $ubdteal;
 }
 
+.reveal .transition-slide-ubdblue {
+  background-color: $ubdblue;
+}
+
 // Make math fonts smaller
 
 span.math.inline, span.math.display {
-    font-size: 0.9em;  
+  font-size: 0.9em;  
+}
+
+// Reduce space between display equation
+
+.reveal p:has(> .math.display) {
+    margin-bottom: -0.5em;  
+}
+
+.reveal figcaption {
+  margin-top: -0.2em;
+  //margin-bottom: -0.2em;
+}
+
+.reveal aside {
+  position: absolute;
+  top: 690px;
+  left: 25px;
+}
+
+.reveal blockquote {
+  margin-bottom: -0.25em
+}
+
+.small-text {
+  font-size: 0.6em;
+  margin-top: -5px;
+}
+
+.cell-output-display p {
+  margin-bottom: 0px; 
+}
+
+.cell {
+  margin-bottom: 0;  /* Removes any bottom margin on the .cell, reducing space below it */
+}
+
+.cell-output-display p,
+.column > p:first-of-type {
+  margin-bottom: 0;  /* Remove the space below the <p> inside .cell-output-display and the first <p> in .column */
+}
+
+.column > p:not(:first-of-type) {
+  margin-top: 0;  /* Remove the space above all <p> elements in .column except the first one */
+}
+
+// Too much space after figures
+
+div.quarto-figure.quarto-figure-center {
+    margin: 0 !important;  /* '0' eliminates the margin, and '!important' ensures this rule takes precedence */
+}
+
+// Target the table class for the striped and hover effects, then enhance it for the booktabs style
+.table-ubd {
+  // Remove default borders to start with a clean slate
+  border-collapse: collapse;
+  border: none;
+
+  // Target the header row for the top and midline
+  thead {
+    tr.header {
+      th {
+        border-top: 2px solid black; // Top line above headers
+        border-bottom: 2px solid black; // Midline below headers
+        padding: 8px; // Adjust padding as needed
+        text-align: left; // Adjust text alignment as preferred
+      }
+    }
+  }
+
+  tbody tr td {
+    border: none;
+  }
+  
+  // Target the last row in the tbody to apply the bottom border
+  tbody tr:last-child {
+    td {
+      border-top: 2px solid black; // Apply a solid bottom border
+    }
+  }
+}
+
+// Callout blocks
+
+.callout {
+  &.callout-note {
+    .callout-body {
+      
+      .callout-title {
+        p {
+          font-size: 1.2em; 
+        }
+      }
+
+      // Adjust the font size for content inside the callout block
+      .callout-content {
+        font-size: 1.3em; 
+        .math.inline {
+          font-size: 1em; 
+        }
+        .math.display {
+          font-size: 1.1em; 
+        }
+      }
+    }
+  }
+}
+
+.r-stack .cell .cell-output-display img {
+  width: auto !important; /* Return to default width */
+  max-width: 100% !important; /* Ensure it can grow beyond 100% of its container */
+  // transform: scale(1.2) !important; /* Enforce scaling; adjust as needed */
+}
+
+// Nudge
+.nudge-up-xxl {
+  transform: translateY(-110px);
+}
+
+.nudge-up-xl {
+  transform: translateY(-75px);
+}
+
+.nudge-up-large {
+  transform: translateY(-50px);
+}
+
+.nudge-up-medium {
+  transform: translateY(-37.5px);
+}
+
+.nudge-up {
+  transform: translateY(-25px);
+}
+
+.nudge-up-small {
+  transform: translateY(-12.5px);
+}
+
+.nudge-down {
+  transform: translateY(25px);
+}
+
+.nudge-down-medium {
+  transform: translateY(37.5px);
 }

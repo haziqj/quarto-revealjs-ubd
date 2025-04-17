@@ -8,9 +8,9 @@ contributes:
       # template-partials:
       #   - title-slide.html
       theme: [default, ubd.scss]
-      logo: ubd_brand_logo_blue.png
+      logo: ubd_brand_logo_40.png
       title-slide-attributes:
-        data-background-image: ubd_bg1.png
+        data-background-image: ubd_bg40.png
         data-background-position: center
         data-background-size: cover
       menu:
@@ -20,7 +20,7 @@ contributes:
       html-math-method: mathjax
       preview-links: auto
       # chalkboard: 
-      #   buttons: false
+      #   buttons: false     
       include-after: |
         <script type="text/javascript">
           Reveal.on('ready', event => {
@@ -39,4 +39,3 @@ contributes:
             }
           });
         </script>
-
