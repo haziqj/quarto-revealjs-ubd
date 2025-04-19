@@ -43,6 +43,14 @@ $ubddarkgrey: #404041;
   color: $ubddeepred;
 }
 
+.ubdbrightred {
+  color: $ubdbrightred;
+}
+
+.ubdsoftred {
+  color: $ubdsoftred;
+}
+
 // Background text fill
 
 .ubdbluebg {
@@ -95,7 +103,7 @@ $presentation-heading-font-weight: 200;
 //$body-bg: #f0f1eb !default;
 $body-color: $jet !default;
 $link-color: $ubddeepred !default;
-$selection-bg: $ubdblue !default;
+$selection-bg: $ubdsoftred !default;
 
 /*-- scss:rules --*/
 
@@ -223,12 +231,13 @@ $selection-bg: $ubdblue !default;
 .reveal ul {
   font-weight: 300;
   padding-left: 16px;
-  font-size: 95%;
+  font-size: 92%;
   margin-top: 0;
   padding-top: 0;
 
   li::marker {
-    color: mix($ubdblue, white, 70%);
+    // color: mix($ubdblue, white, 70%);/**/
+    color: $ubdgray;
   }
 }
 
@@ -240,7 +249,8 @@ $selection-bg: $ubdblue !default;
   
   li:before {
     content: $whitecircle;
-    color: mix($ubdblue, white, 60%);
+    // color: mix($ubdblue, white, 60%);
+    color: $ubdgray;
     display: inline-block;
     width: 0.3em;
     margin-left: -1.2em;
@@ -253,17 +263,23 @@ $selection-bg: $ubdblue !default;
 .reveal ol {
   font-weight: 300;
   padding-left: 16px;
-  font-size: 90%;
-  margin-top: 15px;
+  font-size: 92%;
+  margin-top: 0;
   margin-bottom: 0;
 
   li::marker {
-    color: $ubdblue;
+    color: $ubdgray;
   }
 }
 
 .reveal ol ol {
-  font-size: 80%;
+  font-size: 85%;
+  padding: 0;
+  margin-bottom: 0;
+  
+  li::marker {
+    color: $ubdgray;
+  }
 }
 
 // Move "hamburger" menu button to top right
@@ -311,8 +327,8 @@ $selection-bg: $ubdblue !default;
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
-  background-color: $ubdblue;
-  border: 1px solid $ubdblue;
+  background-color: $ubddeepred;
+  border: 1px solid $ubdbrightred;
   color: #fff !important;
   text-decoration: none;
   border-radius: 4px;
@@ -432,6 +448,25 @@ div.cell-output.cell-output-stdout > pre > code {
 
 .reveal .transition-slide-ubdblue {
   background-color: $ubdblue;
+}
+
+.reveal .transition-slide-ubddeepred {
+  background-color: $ubddeepred;
+}
+
+.reveal .transition-slide-ubdbrightred {
+  background-color: $ubdbrightred;
+}
+
+.reveal .transition-slide-ubdsoftred {
+  background-color: $ubdsoftred;
+}
+
+.reveal .transition-slide-ubdblack {
+  background-color: $ubddarkgrey;
+  * {
+    color: $white !important;
+  }
 }
 
 // Make math fonts smaller
@@ -578,6 +613,10 @@ div.quarto-figure.quarto-figure-center {
 
 .nudge-down {
   transform: translateY(25px);
+}
+
+.nudge-down {
+  transform: translateY(12.5px);
 }
 
 .nudge-down-medium {
