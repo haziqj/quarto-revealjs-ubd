@@ -1,4 +1,6 @@
-# Quarto clean theme
+# UBD reveal.js Theme
+
+> Check out the 40th Anniversary Theme at https://github.com/haziqj/quarto-revealjs-ubd40
 
 ![](ubd.png)
 
