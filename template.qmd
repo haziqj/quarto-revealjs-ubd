@@ -473,7 +473,7 @@ Different background transitions are available via the `background-transition` o
 Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#color-backgrounds)
 :::
 
-## Media Backgrounds {background-video="https://ubd.edu.bn/wp-content/uploads/2025/04/White-Modern-Liquid-Motivational-Reminder-Quote-Video3.mp4" background-opacity="0.5" background-video-loop="true"}
+## Media Backgrounds {background-video="https://ubd.edu.bn/wp-content/uploads/2025/02/UBD%20Discovery%20week%202025%20website.mp4" background-opacity="0.5" background-video-loop="true" background-video-muted="true"}
 
 You can also use the following as a slide background:
 
