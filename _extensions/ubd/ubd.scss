@@ -12,11 +12,6 @@ $ubdblack: #230C0F;
 $ubdgray: #999;
 $white: #fff;
 
-$ubddeepred: #b71757;
-$ubdbrightred: #e81856;
-$ubdsoftred: #f05a91;
-$ubddarkgrey: #404041;
-
 // Colour text
 
 .ubdblue {
@@ -37,18 +32,6 @@ $ubddarkgrey: #404041;
 
 .ubdgray {
   color: $ubdgray;
-}
-
-.ubddeepred {
-  color: $ubddeepred;
-}
-
-.ubdbrightred {
-  color: $ubdbrightred;
-}
-
-.ubdsoftred {
-  color: $ubdsoftred;
 }
 
 // Background text fill
@@ -88,12 +71,11 @@ $ubddarkgrey: #404041;
 // fonts
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i);
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-$font-family-sans-serif: "Nunito Sans", sans-serif !default;
+$font-family-sans-serif: "Roboto", sans-serif !default;
 $presentation-font-size-root: 36px;
 
-$presentation-heading-font: "Nunito Sans", sans-serif !default;
+$presentation-heading-font: "Roboto", sans-serif !default;
 $presentation-heading-color: $ubdblack !default;
 $presentation-heading-font-weight: 200;
 //$presentation-heading-line-height: 2;
@@ -102,8 +84,8 @@ $presentation-heading-font-weight: 200;
 // colors
 //$body-bg: #f0f1eb !default;
 $body-color: $jet !default;
-$link-color: $ubddeepred !default;
-$selection-bg: $ubdsoftred !default;
+$link-color: $ubdblue !default;
+$selection-bg: $ubdblue !default;
 
 /*-- scss:rules --*/
 
@@ -123,35 +105,33 @@ $selection-bg: $ubdsoftred !default;
 
 #title-slide {
   text-align: left;
-  color: $white;
   display: block;
   margin-top: 1.8em;
   margin-left: 1em;
   width: 90%;
 
   .title {
-    color: $white;
+    color: $body-color;
     font-size: 1.4em;
     font-weight: 400;
   }
 
   .subtitle {
-    color: $white;
+    color: $ubdblue;
     font-style: italic;
     margin-top: 0;
     margin-bottom: 0;
   }
  
   .institute {
-    color:$white
+    color:$ubdred
   }
   .quarto-title-institute {
     font-style: bold;
-    color: $white;
+    color: $ubdred;
   }
   .quarto-title-affiliation,
   .quarto-title-author-email {
-    color: $white;
     font-style: italic;
     // font-size: 80%;
     // color: #7F7F7F;
@@ -164,7 +144,7 @@ $selection-bg: $ubdsoftred !default;
   .author,
   .quarto-title-author-name {
     margin-top: 0.5em;
-    color: $white;
+    color: $body-color;
   }
 
   .quarto-title-authors {
@@ -191,7 +171,7 @@ $selection-bg: $ubdsoftred !default;
 }
 
 .reveal h3 {
-  color: $ubdbrightred;
+  color: $ubdblue;
   font-style: italic;
   font-weight: 350;
   font-size: 1em;
@@ -199,7 +179,7 @@ $selection-bg: $ubdsoftred !default;
 }
 
 .reveal h4 {
-  color: $ubddarkgrey;
+  color: $ubdgray;
   font-weight: 350;
   font-size: 0.9em;
   padding-top: 0.5em;
@@ -210,7 +190,7 @@ $selection-bg: $ubdsoftred !default;
 // alerts etc.
 
 .alert {
-  color: $ubddeepred;
+  color: $ubdred;
 }
 
 .fg {
@@ -236,8 +216,7 @@ $selection-bg: $ubdsoftred !default;
   padding-top: 0;
 
   li::marker {
-    // color: mix($ubdblue, white, 70%);/**/
-    color: $ubdgray;
+    color: mix($ubdblue, white, 70%);
   }
 }
 
@@ -249,8 +228,7 @@ $selection-bg: $ubdsoftred !default;
   
   li:before {
     content: $whitecircle;
-    // color: mix($ubdblue, white, 60%);
-    color: $ubdgray;
+    color: mix($ubdblue, white, 60%);
     display: inline-block;
     width: 0.3em;
     margin-left: -1.2em;
@@ -268,7 +246,7 @@ $selection-bg: $ubdsoftred !default;
   margin-bottom: 0;
 
   li::marker {
-    color: $ubdgray;
+    color: $ubdblue;
   }
 }
 
@@ -276,17 +254,13 @@ $selection-bg: $ubdsoftred !default;
   font-size: 85%;
   padding: 0;
   margin-bottom: 0;
-  
-  li::marker {
-    color: $ubdgray;
-  }
 }
 
 // Move "hamburger" menu button to top right
 
 .reveal .slide-menu-button {
   position: fixed;
-  bottom: 5px !important;
+  top: 6px;
   right: 0;
   display: flex;
   justify-content: flex-end;
@@ -302,8 +276,8 @@ $selection-bg: $ubdsoftred !default;
 
 .reveal .slide-chalkboard-buttons {
   position: fixed;
-  bottom: 12px !important;
-  right: 28px !important;
+  top: 12px;
+  right: 24px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -327,8 +301,8 @@ $selection-bg: $ubdsoftred !default;
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
-  background-color: $ubddeepred;
-  border: 1px solid $ubdbrightred;
+  background-color: $ubdblue;
+  border: 1px solid $ubdblue;
   color: #fff !important;
   text-decoration: none;
   border-radius: 4px;
@@ -370,12 +344,12 @@ $selection-bg: $ubdsoftred !default;
   display: block;
   position: fixed;
   z-index: 0;
-  bottom: unset !important;
+  top: unset !important;
   left: unset !important;
-  top: -5px !important;
-  right: 0px !important;
-  max-height: 15% !important;
-  min-height: 15% !important;
+  bottom: 8px !important;
+  right: 10px;
+  max-height: 4.5% !important;
+  min-height: 4.5% !important;
 }
 
 // Slide numbers
@@ -427,8 +401,8 @@ div.cell-output.cell-output-stdout > pre > code {
 // Progress bar
 
 .reveal .progress {
-  background: $ubdsoftred;
-  color: $ubddeepred;
+  background: $ubdblue;
+  color: $ubdteal;
   height: 1.5%;
 }
 
@@ -448,25 +422,6 @@ div.cell-output.cell-output-stdout > pre > code {
 
 .reveal .transition-slide-ubdblue {
   background-color: $ubdblue;
-}
-
-.reveal .transition-slide-ubddeepred {
-  background-color: $ubddeepred;
-}
-
-.reveal .transition-slide-ubdbrightred {
-  background-color: $ubdbrightred;
-}
-
-.reveal .transition-slide-ubdsoftred {
-  background-color: $ubdsoftred;
-}
-
-.reveal .transition-slide-ubdblack {
-  background-color: $ubddarkgrey;
-  * {
-    color: $white !important;
-  }
 }
 
 // Make math fonts smaller
@@ -613,10 +568,6 @@ div.quarto-figure.quarto-figure-center {
 
 .nudge-down {
   transform: translateY(25px);
-}
-
-.nudge-down {
-  transform: translateY(12.5px);
 }
 
 .nudge-down-medium {

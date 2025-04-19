@@ -37,7 +37,7 @@ execute:
 
 ### All about the theme
 
-The [**UBD reveal.js**]{.ubddeepred}^[reveal.js is an open source HTML presentation framework. It's a tool that enables anyone with a web browser to create fully-featured and beautiful presentations for free.] [**Theme**]{.ubdred} is a modern and minimal theme designed for getting information across in a clean and uncluttered manner.
+The [**UBD reveal.js**]{.ubdblue}^[reveal.js is an open source HTML presentation framework. It's a tool that enables anyone with a web browser to create fully-featured and beautiful presentations for free.] [**Theme**]{.ubdred} is a modern and minimal theme designed for getting information across in a clean and uncluttered manner.
 
 This theme is based on the [Quarto Clean Theme ](https://github.com/grantmcdermott/quarto-revealjs-clean) by [Grant McDermott](https://grantmcdermott.com), with its logos and fonts changed, and colour scheme adapted to UBD's official brand colours.
 
@@ -46,9 +46,6 @@ Check out the source code [here](https://github.com/haziqj/quarto-revealjs-ubd/b
 
 ## Colour palette
 
-- [UBD40 Deep Red]{.ubddeepred}: `ubddeepred` ([#B71757]{.bg style="--col: #B71757"})
-- [UBD40 Bright Red]{.ubdbrightred}: `ubdbrightred` a.k.a. Red Crayola ([#E81856]{.bg style="--col: #E81856"})
-- [UBD40 Soft Red]{.ubdsoftred}: `ubdsoftred` a.k.a. Light Pink Crayola ([#F05A91]{.bg style="--col: #F05A91"})
 - [Blues]{.ubdblue}: `ubdblue` a.k.a. Y In Mn Blue ([#325494]{.bg style="--col: #325494"})
 - [Greens]{.ubdteal}: `ubdteal` a.k.a. Medium Aquamarine ([#58DDB3]{.bg style="--col: #58DDB3"})
 - [Yellows]{.ubdyellow}: `ubdyellow` a.k.a. Maize Crayola Red ([#F5C946]{.bg style="--col: #F5C946"})
@@ -60,9 +57,9 @@ Check out the source code [here](https://github.com/haziqj/quarto-revealjs-ubd/b
 https://coolors.co/palette/325494-58ddb3-f5c946-b10f2e-230c0f
 :::
 
-# Features {.transition-slide-ubdsoftred}
+# Features {.transition-slide-ubdyellow}
 
-This is a `{.transition-slide-ubdsoftred}` transition slide.
+This is a `{.transition-slide-ubdyellow}` transition slide.
 
 ## Unordered lists
 
@@ -186,7 +183,7 @@ To emphasize specific words or text, you can:
 - Use the default `.alert` class, e.g. [important note]{.alert}.
 - Use the `.fg` class for custom colour, e.g. [important note]{.fg style="--col: #58DDB3"}.
 - Use the `.bg` class for custom background, e.g. [important note]{.bg style="--col: #F5C946"}.
-- I've also added some convenient CSS classes, e.g. `.ubdblue`, `.ubdteal`, `.ubdyellow`, `.ubdred`, `.ubddeepred`, `.ubdsoftred`, `.ubdgray`.
+- I've also added some convenient CSS classes, e.g. `.ubdblue`, `.ubdteal`, `.ubdyellow`, `.ubdred`, `.ubdblue`, `.ubdsoftred`, `.ubdgray`.
 
 To cross-reference, you have several options, for example:
 
@@ -206,7 +203,7 @@ For example:
 
 Hover over the citations to get the full reference.
 
-# [Mathematics]{.ubddeepred}
+# [Mathematics]{.ubdblue}
 
 ## Using maths
 
@@ -298,9 +295,9 @@ $$
 But it isn't able to be cross-referenced, and if a different qmd document is rendered (e.g. to $\LaTeX$), the theorem block functionality is lost.
 
 
-# Code {.transition-slide-ubddeepred}
+# Code {.transition-slide-ubdblue}
 
-This is a `{.transition-slide-ubddeepred}` transition slide.
+This is a `{.transition-slide-ubdblue}` transition slide.
 
 
 ## Pretty code {auto-animate="true"}
@@ -412,7 +409,7 @@ ggpairs(
   theme_minimal()
 ```
 
-# [reveal.js features]{.ubddeepred}
+# reveal.js features
 
 ## Incremental lists
 
@@ -691,9 +688,9 @@ Learn more: [Speaker View](https://quarto.org/docs/presentations/revealjs/presen
 Learn more: [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/)
 :::
 
-# Summary {.transition-slide-ubdblack}
+# Summary {.transition-slide-ubdteal}
 
-This is a `{.transition-slide-ubdblack}` transition slide.
+This is a `{.transition-slide-ubdteal}` transition slide.
 
 ## Summary
 
