@@ -1,7 +1,5 @@
 # Quarto clean theme
 
-*HAPPY 40th BIRTHDAY UBD!*
-
 ![](ubd.png)
 
 The **UBD reveal.js Theme** is a modern and minimal theme designed for getting information across in a clean and uncluttered manner.
