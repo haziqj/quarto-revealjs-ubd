@@ -80,11 +80,12 @@ $ubddarkgrey: #404041;
 // fonts
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i);
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-$font-family-sans-serif: "Roboto", sans-serif !default;
+$font-family-sans-serif: "Nunito Sans", sans-serif !default;
 $presentation-font-size-root: 36px;
 
-$presentation-heading-font: "Roboto", sans-serif !default;
+$presentation-heading-font: "Nunito Sans", sans-serif !default;
 $presentation-heading-color: $ubdblack !default;
 $presentation-heading-font-weight: 200;
 //$presentation-heading-line-height: 2;
@@ -269,7 +270,7 @@ $selection-bg: $ubdblue !default;
 
 .reveal .slide-menu-button {
   position: fixed;
-  top: 6px;
+  bottom: 5px !important;
   right: 0;
   display: flex;
   justify-content: flex-end;
@@ -285,8 +286,8 @@ $selection-bg: $ubdblue !default;
 
 .reveal .slide-chalkboard-buttons {
   position: fixed;
-  top: 12px;
-  right: 24px;
+  bottom: 12px !important;
+  right: 28px !important;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -355,8 +356,8 @@ $selection-bg: $ubdblue !default;
   z-index: 0;
   bottom: unset !important;
   left: unset !important;
-  top: 15px !important;
-  right: -6px !important;
+  top: -5px !important;
+  right: 0px !important;
   max-height: 15% !important;
   min-height: 15% !important;
 }
